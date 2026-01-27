@@ -1,15 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { bibleQuotes, type BibleQuote } from '../data/bibleQuotes';
 
 const QuoteBanner: React.FC = () => {
-    const [quote, setQuote] = useState<BibleQuote | null>(null);
-
-    useEffect(() => {
-        // Select a random quote on mount
+    const [quote] = useState<BibleQuote | null>(() => {
         const randomIndex = Math.floor(Math.random() * bibleQuotes.length);
-        setQuote(bibleQuotes[randomIndex]);
-    }, []);
+        return bibleQuotes[randomIndex];
+    });
 
     if (!quote) return null; // Or a loading skeleton if preferred
 

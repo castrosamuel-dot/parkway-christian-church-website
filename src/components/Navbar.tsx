@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -26,9 +27,9 @@ const Navbar: React.FC = () => {
         >
             <div className="container mx-auto px-4 flex justify-between items-center">
                 {/* Logo */}
-                <a href="/" className="text-2xl font-bold tracking-tighter uppercase">
+                <Link to="/" className="text-2xl font-bold tracking-tighter uppercase">
                     PARKWAY <span className="text-brand-red">CHRISTIAN</span> CHURCH
-                </a>
+                </Link>
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide">
@@ -39,10 +40,10 @@ const Navbar: React.FC = () => {
                         </a>
                         <div className="absolute top-full left-0 w-56 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform -translate-y-2 group-hover:translate-y-0">
                             <div className="bg-brand-black/95 backdrop-blur-md border md:border-t-2 border-brand-red py-2 shadow-xl rounded-b-md">
-                                <a href="#" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">Our Mission</a>
-                                <a href="#" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">Our Statement of Faith</a>
-                                <a href="#" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">Our Leadership Team</a>
-                                <a href="#" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">School</a>
+                                <Link to="/mission" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">Our Mission</Link>
+                                <Link to="/faith" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">Our Statement of Faith</Link>
+                                <Link to="/leadership" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">Our Leadership Team</Link>
+                                <a href="https://www.pcs-fl.net/" target="_blank" rel="noopener noreferrer" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">School</a>
                             </div>
                         </div>
                     </div>
@@ -70,17 +71,20 @@ const Navbar: React.FC = () => {
                         </a>
                         <div className="absolute top-full left-0 w-56 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform -translate-y-2 group-hover:translate-y-0">
                             <div className="bg-brand-black/95 backdrop-blur-md border md:border-t-2 border-brand-red py-2 shadow-xl rounded-b-md">
-                                <a href="#" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">Volunteers</a>
+                                <Link to="/volunteers" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">Volunteers</Link>
                                 <a href="#" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">Get Connected</a>
-                                <a href="#" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">Sermons</a>
-                                <a href="#" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">Gallery</a>
+                                <Link to="/sermons" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">Sermons</Link>
+                                <Link to="/videos" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">Videos</Link>
+                                <Link to="/gallery" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">Gallery</Link>
                             </div>
                         </div>
                     </div>
-                    <a href="#" className="hover:text-brand-red transition-colors">GIVE</a>
-                    <button className="bg-brand-red px-6 py-2 rounded text-white font-bold hover:bg-red-700 transition-colors">
-                        LIVE
-                    </button>
+                    <a href="https://www.eservicepayments.com/cgi-bin/Vanco_ver3.vps?appver3=wWsk24ZWJSTZKsGd1RMKlg0BDvsSG3VIWQCPJNNxD8upkiY7JlDavDsozUE7KG0nFx2NSo8LdUKGuGuF396vbZewsOHnV4Ld_dQesVjewg2XHubq5Z7ap5JVmPErc4ZeYHCKCZhESjGNQmZ5B-6dx-cgLWI1PcgQ7f1aayiwnU0=&ver=3" target="_blank" rel="noopener noreferrer" className="hover:text-brand-red transition-colors">GIVE</a>
+                    <Link to="/live">
+                        <button className="bg-brand-red px-6 py-2 rounded text-white font-bold hover:bg-red-700 transition-colors">
+                            LIVE
+                        </button>
+                    </Link>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -121,10 +125,10 @@ const Navbar: React.FC = () => {
                                             exit={{ height: 0, opacity: 0 }}
                                             className="overflow-hidden flex flex-col items-center space-y-3"
                                         >
-                                            <a href="#" className="text-base text-gray-300 hover:text-brand-white pt-2" onClick={() => setIsOpen(false)}>Our Mission</a>
-                                            <a href="#" className="text-base text-gray-300 hover:text-brand-white" onClick={() => setIsOpen(false)}>Our Statement of Faith</a>
-                                            <a href="#" className="text-base text-gray-300 hover:text-brand-white" onClick={() => setIsOpen(false)}>Our Leadership Team</a>
-                                            <a href="#" className="text-base text-gray-300 hover:text-brand-white" onClick={() => setIsOpen(false)}>School</a>
+                                            <Link to="/mission" className="text-base text-gray-300 hover:text-brand-white pt-2" onClick={() => setIsOpen(false)}>Our Mission</Link>
+                                            <Link to="/faith" className="text-base text-gray-300 hover:text-brand-white" onClick={() => setIsOpen(false)}>Our Statement of Faith</Link>
+                                            <Link to="/leadership" className="text-base text-gray-300 hover:text-brand-white" onClick={() => setIsOpen(false)}>Our Leadership Team</Link>
+                                            <a href="https://www.pcs-fl.net/" target="_blank" rel="noopener noreferrer" className="text-base text-gray-300 hover:text-brand-white" onClick={() => setIsOpen(false)}>School</a>
                                         </motion.div>
                                     )}
                                 </AnimatePresence>
@@ -188,10 +192,11 @@ const Navbar: React.FC = () => {
                                             exit={{ height: 0, opacity: 0 }}
                                             className="overflow-hidden flex flex-col items-center space-y-3"
                                         >
-                                            <a href="#" className="text-base text-gray-300 hover:text-brand-white pt-2" onClick={() => setIsOpen(false)}>Volunteers</a>
+                                            <Link to="/volunteers" className="text-base text-gray-300 hover:text-brand-white pt-2" onClick={() => setIsOpen(false)}>Volunteers</Link>
                                             <a href="#" className="text-base text-gray-300 hover:text-brand-white" onClick={() => setIsOpen(false)}>Get Connected</a>
-                                            <a href="#" className="text-base text-gray-300 hover:text-brand-white" onClick={() => setIsOpen(false)}>Sermons</a>
-                                            <a href="#" className="text-base text-gray-300 hover:text-brand-white" onClick={() => setIsOpen(false)}>Gallery</a>
+                                            <Link to="/sermons" className="text-base text-gray-300 hover:text-brand-white" onClick={() => setIsOpen(false)}>Sermons</Link>
+                                            <Link to="/videos" className="text-base text-gray-300 hover:text-brand-white" onClick={() => setIsOpen(false)}>Videos</Link>
+                                            <Link to="/gallery" className="text-base text-gray-300 hover:text-brand-white" onClick={() => setIsOpen(false)}>Gallery</Link>
                                         </motion.div>
                                     )}
                                 </AnimatePresence>
@@ -199,10 +204,12 @@ const Navbar: React.FC = () => {
                         </div>
 
                         <div className="w-16 h-px bg-white/20 my-2"></div>
-                        <a href="#" className="text-lg font-semibold hover:text-brand-red" onClick={() => setIsOpen(false)}>GIVE</a>
-                        <button className="bg-brand-red px-8 py-3 rounded text-white font-bold hover:bg-red-700 transition-colors w-3/4">
-                            LIVE
-                        </button>
+                        <a href="https://www.eservicepayments.com/cgi-bin/Vanco_ver3.vps?appver3=wWsk24ZWJSTZKsGd1RMKlg0BDvsSG3VIWQCPJNNxD8upkiY7JlDavDsozUE7KG0nFx2NSo8LdUKGuGuF396vbZewsOHnV4Ld_dQesVjewg2XHubq5Z7ap5JVmPErc4ZeYHCKCZhESjGNQmZ5B-6dx-cgLWI1PcgQ7f1aayiwnU0=&ver=3" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold hover:text-brand-red" onClick={() => setIsOpen(false)}>GIVE</a>
+                        <Link to="/live" className="w-3/4">
+                            <button className="bg-brand-red px-8 py-3 rounded text-white font-bold hover:bg-red-700 transition-colors w-full">
+                                LIVE
+                            </button>
+                        </Link>
                     </motion.div>
                 )}
             </AnimatePresence>

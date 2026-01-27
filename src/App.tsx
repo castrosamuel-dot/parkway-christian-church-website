@@ -1,24 +1,31 @@
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import ServiceTimes from './components/ServiceTimes';
-import GridSection from './components/GridSection';
-import QuoteBanner from './components/QuoteBanner';
-import NextGen from './components/NextGen';
-import CurrentSeries from './components/CurrentSeries';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import Live from './pages/Live';
+import OurMission from './pages/OurMission';
+import Leadership from './pages/Leadership';
+import StatementOfFaith from './pages/StatementOfFaith';
+import Sermons from './pages/Sermons';
+import Videos from './pages/Videos';
+import Gallery from './pages/Gallery';
+import Volunteers from './pages/Volunteers';
 
 function App() {
   return (
     <div className="bg-brand-black min-h-screen text-white font-sans">
       <Navbar />
-      <main>
-        <Hero />
-        <ServiceTimes />
-        <GridSection />
-        <QuoteBanner />
-        <NextGen />
-        <CurrentSeries />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/live" element={<Live />} />
+        <Route path="/mission" element={<OurMission />} />
+        <Route path="/leadership" element={<Leadership />} />
+        <Route path="/faith" element={<StatementOfFaith />} />
+        <Route path="/sermons" element={<Sermons />} />
+        <Route path="/videos" element={<Videos />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/volunteers" element={<Volunteers />} />
+      </Routes>
       <Footer />
     </div>
   );

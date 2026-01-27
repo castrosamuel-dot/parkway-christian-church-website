@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CurrentSeries: React.FC = () => {
     return (
@@ -41,12 +42,12 @@ const CurrentSeries: React.FC = () => {
                     </p>
 
                     <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-                        <button className="bg-brand-red text-white py-3 px-6 font-bold uppercase tracking-wider hover:bg-red-700 transition-colors">
+                        <Link to="/sermons" className="bg-brand-red text-white py-3 px-6 font-bold uppercase tracking-wider hover:bg-red-700 transition-colors inline-block text-center">
                             Watch Our Latest Message
-                        </button>
-                        <button className="bg-brand-red text-white py-3 px-6 font-bold uppercase tracking-wider hover:bg-red-700 transition-colors">
+                        </Link>
+                        <Link to="/videos" className="bg-brand-red text-white py-3 px-6 font-bold uppercase tracking-wider hover:bg-red-700 transition-colors inline-block text-center">
                             View The Playlist
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

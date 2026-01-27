@@ -1,0 +1,38 @@
+export interface VolunteerRole {
+    id: string;
+    name: string; // Team Name
+    role: string; // "Volunteer Team" or specific role description
+    bio: string;
+    imageUrl: string;
+}
+
+export const volunteersData: VolunteerRole[] = [
+    {
+        id: '1',
+        name: "Welcome Team",
+        role: "Guest Services",
+        bio: "The Welcome Team is the first face people see at Parkway. We love to make everyone feel at home, from the parking lot to the sanctuary doors. Join us in creating a warm and inviting atmosphere.",
+        imageUrl: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+        id: '2',
+        name: "Worship & Production",
+        role: "Creative Arts",
+        bio: "Our creative teams facilitate worship through music, audio, visuals, and lighting. If you have musical talent or technical skills (or want to learn!), we have a place for you to serve.",
+        imageUrl: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+        id: '3',
+        name: "Parkway Kids",
+        role: "Children's Ministry",
+        bio: "We have the privilege of investing in the next generation. From holding babies to teaching elementary lessons, our Kids Team helps children learn about Jesus in a safe and fun environment.",
+        imageUrl: "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+        id: '4',
+        name: "The Park Youth",
+        role: "Student Ministry",
+        bio: "Lead small groups, hang out at events, and mentor students. The Youth Team is all about building relationships and pointing students to Christ during these pivotal years.",
+        imageUrl: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    }
+];
