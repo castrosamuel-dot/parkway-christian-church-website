@@ -9,7 +9,7 @@ const NextGen: React.FC = () => {
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    {/* LOCALKIDS */}
+                    {/* Journey Kids */}
                     <div className="flex flex-col items-center text-center">
                         <div className="w-full h-80 overflow-hidden mb-6 relative group">
                             <img
@@ -18,9 +18,9 @@ const NextGen: React.FC = () => {
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             />
                         </div>
-                        <h3 className="text-2xl font-bold uppercase mb-4">LocalKids</h3>
+                        <h3 className="text-2xl font-bold uppercase mb-4">Journey Kids</h3>
                         <p className="text-gray-600 mb-2 max-w-md">
-                            A safe and engaging space for your children to connect with Jesus.
+                            Journey Kids is a safe and engaging space for your children to connect with Jesus.
                         </p>
                         <p className="text-gray-500 text-sm mb-6 max-w-md">
                             Preschool only every Thursdays at 6:30 PM<br />
@@ -31,7 +31,7 @@ const NextGen: React.FC = () => {
                         </button>
                     </div>
 
-                    {/* LOCALYTH */}
+                    {/* The Park Youth */}
                     <div className="flex flex-col items-center text-center">
                         <div className="w-full h-80 overflow-hidden mb-6 relative group">
                             <img
@@ -40,9 +40,9 @@ const NextGen: React.FC = () => {
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             />
                         </div>
-                        <h3 className="text-2xl font-bold uppercase mb-4">LocalYth</h3>
+                        <h3 className="text-2xl font-bold uppercase mb-4">The Park Youth</h3>
                         <p className="text-gray-600 mb-2 max-w-md">
-                            Our Youth meet every Tuesday at 7 PM to worship, learn, and impact their community for Jesus.
+                            The Park Youth meet every Tuesday at 7 PM to worship, learn, and impact their community for Jesus.
                         </p>
                         <p className="text-gray-500 text-sm mb-6 max-w-md">
                             They leave equipped to make a lasting difference in their schools, families, and friendships.
