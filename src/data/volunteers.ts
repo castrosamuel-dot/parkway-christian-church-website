@@ -18,7 +18,7 @@ export const volunteersData: VolunteerRole[] = [
         id: '2',
         name: "Worship & Production",
         role: "Creative Arts",
-        bio: "Our creative teams facilitate worship through music, audio, visuals, and lighting. If you have musical talent or technical skills (or want to learn!), we have a place for you to serve.",
+        bio: "At Parkway, worship is more than music. It’s our response to God’s love. Our worship team is made up of passionate musicians and singers who gather weekly to rehearse, grow together, and prepare our hearts for Sunday morning worship. United by our love for Christ, we serve our church and community by leading others into meaningful moments of praise, reflection, and connection through music. Whether on stage or behind the scenes, our goal is simple: to glorify God and serve others with excellence, humility, and joy. Our creative teams facilitate worship through music, audio, visuals, and lighting. If you have musical talent or technical skills (or want to learn!), we have a place for you to serve.",
         imageUrl: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
