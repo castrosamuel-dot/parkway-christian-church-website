@@ -11,6 +11,7 @@ import Videos from './pages/Videos';
 import Gallery from './pages/Gallery';
 import Volunteers from './pages/Volunteers';
 import ParkYouth from './pages/ParkYouth';
+import Events from './pages/Events';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/volunteers" element={<Volunteers />} />
         <Route path="/youth" element={<ParkYouth />} />
+        <Route path="/events" element={<Events />} />
       </Routes>
       <Footer />
     </div>

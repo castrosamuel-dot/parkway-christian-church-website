@@ -1,38 +1,55 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const StatementOfFaith = () => {
     const beliefs = [
         {
-            title: "The Bible",
-            content: "We believe that the Bible is God's Word. It is accurate, authoritative and applicable to our every day lives."
+            title: "Confession of Faith",
+            content: "We confess that Jesus is the Christ, the Son of the Living God, and proclaim him Lord and Savior of the world, requiring nothing more – and nothing less – as a basis of our life together."
         },
         {
-            title: "God",
-            content: "We believe in one eternal God who is the Creator of all things. He exists in three Persons: God the Father, God the Son and God the Holy Spirit. He is totally loving and completely holy."
+            title: "Scripture",
+            content: "We hold the centrality of scripture, recognizing that each person has the freedom – and the responsibility – to study God’s Word within the community of the church."
         },
         {
-            title: "Humanity & Sin",
-            content: "We believe that sin has separated each of us from God and His purpose for our lives."
+            title: "Baptism",
+            content: "We practice the baptism of believers, which emphasizes that God’s grace demands a response of faith and discipleship, while also recognizing the baptism performed in other churches."
         },
         {
-            title: "Jesus Christ",
-            content: "We believe that the Lord Jesus Christ as both God and man is the only One who can reconcile us to God. He lived a sinless and exemplary life, died on the cross in our place, and rose again to prove His victory and empower us for life."
+            title: "The Lord's Supper",
+            content: "We gather for the Lord’s Supper, as often as possible, experiencing at this table the gracious, forgiving presence of Jesus Christ."
         },
         {
-            title: "Salvation",
-            content: "We believe that in order to receive forgiveness and the 'new birth' we must repent of our sins, believe in the Lord Jesus Christ, and submit to His will for our lives."
+            title: "Covenant Community",
+            content: "We structure our community around the biblical idea of covenant, emphasizing not obedience to human authority but accountability to one another because of our shared obedience to Christ."
         },
         {
-            title: "The Holy Spirit",
-            content: "We believe that in order to live the holy and fruitful lives that God intends for us, we need to be baptised in water and be filled with the power of the Holy Spirit. The Holy Spirit enables us to use spiritual gifts, including speaking in tongues."
+            title: "Mission & Justice",
+            content: "We participate in God’s mission for the world, working with partners to heal the brokenness of creation and bring justice and peace to the whole human family."
+        },
+        {
+            title: "Christian Unity",
+            content: "We hear a special calling to make visible the unity of all Christians, proclaiming that in our diversity we belong to one another because we commonly belong to Christ."
+        },
+        {
+            title: "Witness",
+            content: "We witness to the Gospel of God’s saving love for the world in Jesus Christ, while continuing to struggle with how God’s love may be known to others in different ways."
+        },
+        {
+            title: "Ministry of Believers",
+            content: "We affirm the priesthood of all believers, rejoicing in the gifts of the Holy Spirit – which include the gift of leadership – that God has given for the common good."
+        },
+        {
+            title: "Diversity",
+            content: "We celebrate the diversity of our common life, affirming our different histories, styles of worship, and forms of service."
         },
         {
             title: "The Church",
-            content: "We believe in the power and significance of the Church and the necessity of believers to meet regularly together for fellowship, prayer and the 'breaking of bread'."
+            content: "We give thanks that each congregation, where Christ is present through faith, is truly the church, affirming as well that God’s church and God’s mission stretch from our doorsteps to the ends of the earth."
         },
         {
-            title: "Purpose",
-            content: "We believe that God has individually equipped us so that we can successfully achieve His purpose for our lives which is to worship God, fulfil our role in the Church and serve the community in which we live."
+            title: "Future Hope",
+            content: "We anticipate God’s coming reign, seeking to serve the God – Creator, Redeemer, and Sustainer – whose loving dominion has no end."
         }
     ];
 
@@ -99,9 +116,11 @@ const StatementOfFaith = () => {
                         <p className="text-gray-600 max-w-2xl mx-auto mb-8">
                             We explore these truths every week in our services and Life Groups.
                         </p>
-                        <button className="bg-brand-red text-white py-3 px-8 rounded font-bold hover:bg-red-700 transition-colors">
-                            PLAN A VISIT
-                        </button>
+                        <Link to="/events">
+                            <button className="bg-brand-red text-white py-3 px-8 rounded font-bold hover:bg-white hover:text-brand-red transition-colors">
+                                PLAN A VISIT
+                            </button>
+                        </Link>
                     </motion.div>
                 </div>
             </section>

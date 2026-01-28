@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
                                 <a href="#" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">Journey Land</a>
                                 <a href="#" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">Journey Kids</a>
                                 <Link to="/youth" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">The Park Youth</Link>
-                                <a href="#" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">Events</a>
+                                <Link to="/events" className="block px-6 py-3 text-white hover:bg-brand-red/20 hover:text-brand-red transition-colors">Events</Link>
                             </div>
                         </div>
                     </div>
@@ -163,7 +163,7 @@ const Navbar: React.FC = () => {
                                             <a href="#" className="text-base text-gray-300 hover:text-brand-white" onClick={() => setIsOpen(false)}>Journey Land</a>
                                             <a href="#" className="text-base text-gray-300 hover:text-brand-white" onClick={() => setIsOpen(false)}>Journey Kids</a>
                                             <Link to="/youth" className="text-base text-gray-300 hover:text-brand-white" onClick={() => setIsOpen(false)}>The Park Youth</Link>
-                                            <a href="#" className="text-base text-gray-300 hover:text-brand-white" onClick={() => setIsOpen(false)}>Events</a>
+                                            <Link to="/events" className="text-base text-gray-300 hover:text-brand-white" onClick={() => setIsOpen(false)}>Events</Link>
                                         </motion.div>
                                     )}
                                 </AnimatePresence>

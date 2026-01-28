@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Heart, Globe, BookOpen, Users } from 'lucide-react';
 
 const OurMission = () => {
@@ -13,22 +14,22 @@ const OurMission = () => {
         {
             icon: <Heart className="w-8 h-8 text-brand-red" />,
             title: "Unconditional Love",
-            description: "We believe in loving everyone exactly where they are, just as Jesus does."
+            description: "Love in action, not just words."
         },
         {
             icon: <BookOpen className="w-8 h-8 text-brand-red" />,
-            title: "Biblical Truth",
-            description: "We stand firmly on the Word of God as our foundation for life and faith."
+            title: "Jesus First",
+            description: "The center of everything we do."
         },
         {
             icon: <Users className="w-8 h-8 text-brand-red" />,
             title: "Authentic Community",
-            description: "We are better together. We prioritize real relationships and doing life together."
+            description: "Growing together in faith, relationships, and purpose."
         },
         {
             icon: <Globe className="w-8 h-8 text-brand-red" />,
             title: "Global Impact",
-            description: "We are committed to making a difference locally and around the world."
+            description: "Stronger together, United in Christ, Rich in diversity."
         }
     ];
 
@@ -50,7 +51,7 @@ const OurMission = () => {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8 }}
-                        className="text-5xl md:text-7xl font-bold tracking-tighter mb-4 text-white"
+                        className="text-7xl md:text-9xl font-bold tracking-tighter mb-4 text-white"
                     >
                         OUR <span className="text-brand-red">MISSION</span>
                     </motion.h1>
@@ -60,6 +61,14 @@ const OurMission = () => {
                         transition={{ delay: 0.5, duration: 0.8 }}
                         className="h-1 bg-brand-red mx-auto"
                     />
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1, duration: 0.8 }}
+                        className="text-2xl md:text-4xl font-semibold text-white mt-6 tracking-wide"
+                    >
+                        Growing faith. Building community. Living like Jesus.
+                    </motion.p>
                 </div>
             </section>
 
@@ -69,7 +78,7 @@ const OurMission = () => {
                     <motion.div {...fadeIn}>
                         <h2 className="text-xl md:text-2xl font-bold text-gray-600 tracking-widest uppercase mb-8">Why We Exist</h2>
                         <p className="text-3xl md:text-5xl font-bold leading-tight">
-                            "To lead people into a growing relationship with <span className="text-brand-red">Jesus Christ</span>."
+                            "To walk with <span className="text-brand-red">people</span> through real life and point them to the <span className="text-brand-red">HOPE</span> <br />found in <span className="text-brand-red">Jesus</span>."
                         </p>
                     </motion.div>
                 </div>
@@ -105,12 +114,14 @@ const OurMission = () => {
                                 We see a church that is vibrant, diverse, and passionate about God. A place where everyone is welcome, nobody is perfect, and anything is possible.
                             </p>
                             <p className="text-lg text-gray-800 leading-relaxed mb-8">
-                                Our vision is to be a city on a hill, shining the light of Christ into every corner of our community and beyond. We are building a legacy of faith for the next generation.
+                                Faith that’s alive. Love that’s real. People who care.
                             </p>
                             <div className="flex gap-4">
-                                <button className="bg-brand-red px-8 py-3 rounded font-bold hover:bg-red-700 transition-colors">
-                                    READ OUR BELIEFS
-                                </button>
+                                <Link to="/faith">
+                                    <button className="bg-brand-red px-8 py-3 rounded font-bold hover:bg-white hover:text-brand-red transition-colors">
+                                        READ OUR BELIEFS
+                                    </button>
+                                </Link>
                             </div>
                         </motion.div>
                     </div>
@@ -165,9 +176,11 @@ const OurMission = () => {
                         <p className="text-white/80 text-xl max-w-2xl mx-auto mb-10">
                             The best way to understand our mission is to experience it. Join us this Sunday.
                         </p>
-                        <button className="bg-white text-brand-red px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors uppercase tracking-widest shadow-xl">
-                            Plan Your Visit
-                        </button>
+                        <Link to="/events">
+                            <button className="bg-white text-brand-red px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors uppercase tracking-widest shadow-xl">
+                                Plan Your Visit
+                            </button>
+                        </Link>
                     </motion.div>
                 </div>
             </section>
