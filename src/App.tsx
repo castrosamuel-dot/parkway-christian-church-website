@@ -11,10 +11,12 @@ import Videos from './pages/Videos';
 import Gallery from './pages/Gallery';
 import Volunteers from './pages/Volunteers';
 import ParkYouth from './pages/ParkYouth';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <div className="bg-brand-black min-h-screen text-white font-sans">
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
