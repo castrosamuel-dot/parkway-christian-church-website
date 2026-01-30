@@ -3,8 +3,8 @@ import type { YouthEvent } from '../data/youthEvents';
 const FB_ACCESS_TOKEN = import.meta.env.VITE_FB_ACCESS_TOKEN;
 const DEFAULT_PAGE_ID = import.meta.env.VITE_FB_PAGE_ID;
 
-export const fetchFacebookEvents = async (pageId: string = DEFAULT_PAGE_ID): Promise<YouthEvent[]> => {
-    if (!FB_ACCESS_TOKEN || !pageId) {
+export const fetchFacebookEvents = async (pageId: string = DEFAULT_PAGE_ID, accessToken: string = FB_ACCESS_TOKEN): Promise<YouthEvent[]> => {
+    if (!accessToken || !pageId) {
         console.warn(`Facebook Credentials missing for Page ID: ${pageId}. Returning mock data.`);
         // Fallback to static data if no credentials
         return [];
@@ -14,7 +14,7 @@ export const fetchFacebookEvents = async (pageId: string = DEFAULT_PAGE_ID): Pro
         // Fetch events from the page
         // fields needed: name, description, start_time, cover, id
         const response = await fetch(
-            `https://graph.facebook.com/v18.0/${pageId}/events?fields=id,name,description,start_time,cover,place&access_token=${FB_ACCESS_TOKEN}`
+            `https://graph.facebook.com/v18.0/${pageId}/events?fields=id,name,description,start_time,cover,place&access_token=${accessToken}`
         );
 
         const data = await response.json();

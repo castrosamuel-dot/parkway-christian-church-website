@@ -1,6 +1,8 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Heart, Globe, BookOpen, Users } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { missionQuotes } from '../data/missionQuotes';
 
 const OurMission = () => {
     const fadeIn = {
@@ -9,6 +11,15 @@ const OurMission = () => {
         viewport: { once: true },
         transition: { duration: 0.6 }
     };
+
+    const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentQuoteIndex((prev) => (prev + 1) % missionQuotes.length);
+        }, 5000);
+        return () => clearInterval(interval);
+    }, []);
 
     const values = [
         {
@@ -172,12 +183,34 @@ const OurMission = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                     >
+                        {/* Quotes Carousel */}
+                        <div className="h-32 mb-8 relative">
+                            <AnimatePresence mode='wait'>
+                                <motion.div
+                                    key={currentQuoteIndex}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -20 }}
+                                    transition={{ duration: 0.5 }}
+                                    className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none"
+                                >
+                                    <p className="text-white/90 text-xl italic font-serif max-w-2xl mx-auto">
+                                        "{missionQuotes[currentQuoteIndex].text}"
+                                    </p>
+                                    <p className="text-white/70 font-bold mt-2 text-sm uppercase tracking-widest">
+                                        — {missionQuotes[currentQuoteIndex].author}
+                                    </p>
+                                </motion.div>
+                            </AnimatePresence>
+                        </div>
+
                         <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">SEE FOR YOURSELF</h2>
-                        <p className="text-white/80 text-xl max-w-2xl mx-auto mb-10">
+
+                        <p className="text-white/80 text-lg max-w-2xl mx-auto mb-10">
                             The best way to understand our mission is to experience it. Join us this Sunday.
                         </p>
                         <Link to="/events">
-                            <button className="bg-white text-brand-red px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors uppercase tracking-widest shadow-xl">
+                            <button className="bg-white text-brand-red px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors uppercase tracking-widest shadow-xl pointer-events-auto">
                                 Plan Your Visit
                             </button>
                         </Link>

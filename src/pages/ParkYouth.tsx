@@ -12,9 +12,16 @@ const ParkYouth: React.FC = () => {
 
     useEffect(() => {
         const loadEvents = async () => {
-            const fbEvents = await fetchFacebookEvents();
-            if (fbEvents && fbEvents.length > 0) {
-                setEvents(fbEvents);
+            const youthPageId = import.meta.env.VITE_FB_YOUTH_PAGE_ID;
+            const youthAccessToken = import.meta.env.VITE_FB_YOUTH_ACCESS_TOKEN;
+
+            if (youthPageId) {
+                // Pass both page ID and specifically the youth access token (or undefined to let service default, but here we want specific if available)
+                // If youthAccessToken is undefined, the service will fall back to the default token, which is acceptable behavior if not set.
+                const fbEvents = await fetchFacebookEvents(youthPageId, youthAccessToken);
+                if (fbEvents && fbEvents.length > 0) {
+                    setEvents(fbEvents);
+                }
             }
             // If fbEvents is empty (error or no credentials), we keep staticEvents as default
         };
