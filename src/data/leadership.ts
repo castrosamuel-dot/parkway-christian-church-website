@@ -1,4 +1,4 @@
-import { a } from "framer-motion/client";
+
 
 export interface Leader {
     id: string;
