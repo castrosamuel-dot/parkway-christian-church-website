@@ -42,7 +42,7 @@ const Leadership = () => {
                                 >
                                     {/* Image Section */}
                                     <div className="w-full md:w-1/2">
-                                        <div className="relative aspect-[3/4] md:aspect-square lg:aspect-[4/3] w-full bg-gray-200 rounded-lg overflow-hidden shadow-2xl group">
+                                        <div className="relative aspect-[5/4] w-full bg-gray-200 rounded-lg overflow-hidden shadow-2xl group">
                                             {leader.imageUrl ? (
                                                 <img
                                                     src={leader.imageUrl}
